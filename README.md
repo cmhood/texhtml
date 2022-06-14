@@ -81,7 +81,7 @@ Wow!
 Additionally, verbatim blocks are permitted in two forms.  Like in
 markdown a sequence of three backticks (`\``) will start a verbatim
 string, which can then be terminated with the same sequence.  This can
-be used in combination with the `<pre>` tag.
+be used in combination with the `\<pre\>` tag.
 
 The other way is by putting a backtick before the tag name in a command,
 e.g. `\`code{...}`.
