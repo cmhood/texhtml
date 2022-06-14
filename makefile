@@ -1,14 +1,15 @@
 .POSIX:
+.SUFFIXES:
 
-cc:=cc
-cflags:=-std=c17 -Wall -Wextra -Werror -Wshadow
-src:=texhtml.c
+cc=cc
+cflags=-std=c17 -Wall -Wextra -Werror -Wshadow
+src=texhtml.c
 
 debug: $(src)
-	$(cc) $< -o $@ $(cflags) -O0 -g -fsanitize=undefined -fsanitize=address -DDEBUG
+	$(cc) $(src) -o $@ $(cflags) -O0 -g -fsanitize=undefined -fsanitize=address -DDEBUG
 
 texhtml: $(src)
-	$(cc) $< -o $@ $(cflags) -O3
+	$(cc) $(src) -o $@ $(cflags) -O3
 
 .PHONY: install
 install: texhtml
