@@ -241,7 +241,7 @@ static bool translate_formatted_substitutions(input_cursor_ *const input, output
 		{ "\\{", "{" },
 		{ "\\}", "}" },
 		{ "\\&", "&" },
-		{ "--", "&endash;" },
+		{ "--", "&ndash;" },
 		{ "``", "&ldquo;" },
 		{ "`", "&lsquo;" },
 		{ "''", "&rdquo;" },
