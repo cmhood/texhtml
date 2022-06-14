@@ -10,5 +10,15 @@ debug: $(src)
 texhtml: $(src)
 	$(cc) $< -o $@ $(cflags) -O3
 
+.PHONY: install
+install: texhtml
+	mkdir -p /usr/local/bin
+	cp $< /usr/local/bin
+
+.PHONY: uninstall
+uninstall:
+	rm /usr/local/bin/texhtml
+
+.PHONY: clean
 clean:
 	rm -f debug texhtml
