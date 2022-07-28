@@ -15,7 +15,7 @@
 #ifdef DEBUG
 #define ASSERT(COND) do { if (!(COND)) { undefined; } } while (0)
 #else
-#define ASSERT(COND) do { if (!(COND)) { undefined; } } while (0)
+#define ASSERT(COND) do { false && (COND); } while (0)
 #endif
 
 /* An input string for the parser. */
